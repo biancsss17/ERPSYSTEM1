@@ -2,13 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Suppliers · {{ config('app.name', 'EasyBiz') }}</title>
+    <title>Suppliers · {{ config('app.name', 'ERP SYSTEM') }}</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
     <script>tailwind.config={theme:{extend:{colors:{primary:'#004ac6',canvas:'#f4f7fb',muted:'#6d7890'}}}}</script>
 </head>
 <body class="min-h-screen bg-canvas text-slate-900">
-    <aside class="fixed inset-y-0 left-0 z-40 hidden w-72 flex-col justify-between bg-white px-4 py-6 shadow-sm lg:flex"><div><a href="{{ url('/') }}" class="mb-8 flex items-center gap-3 px-3"><div class="flex h-10 w-10 items-center justify-center rounded-xl bg-primary text-xl font-extrabold text-white">E</div><div><p class="text-lg font-extrabold tracking-tight text-primary">EasyBiz</p><p class="text-xs text-muted">Business dashboard</p></div></a><nav class="space-y-1" aria-label="Main navigation">
+    <aside class="fixed inset-y-0 left-0 z-40 hidden w-72 flex-col justify-between bg-white px-4 py-6 shadow-sm lg:flex"><div><a href="{{ url('/') }}" class="mb-8 flex items-center gap-3 px-3"><div class="flex h-10 w-10 items-center justify-center rounded-xl bg-primary text-xl font-extrabold text-white">E</div><div><p class="text-lg font-extrabold tracking-tight text-primary">ERP SYSTEM</p><p class="text-xs text-muted">Business dashboard</p></div></a><nav class="space-y-1" aria-label="Main navigation">
         @foreach ([['/','Home','home'],['/sales','Sales','point_of_sale'],['/products','Products','inventory_2'],['/customers','Customers','groups'],['/suppliers','Suppliers','local_shipping'],['/reimbursements','Reimbursements','receipt_long'],['/purchases','Purchases','shopping_cart'],['/reports','Reports','analytics']] as $item)<a href="{{ url($item[0]) }}" class="flex min-h-12 items-center gap-3 rounded-xl px-4 text-sm font-semibold {{ $item[1] === 'Suppliers' ? 'bg-primary text-white shadow-sm' : 'text-slate-500 hover:bg-slate-100 hover:text-slate-900' }}"><span class="material-symbols-outlined">{{ $item[2] }}</span>{{ $item[1] }}</a>@endforeach
     </nav></div><a href="#" class="flex min-h-12 items-center gap-3 rounded-xl px-4 text-sm font-semibold text-red-600 hover:bg-red-50"><span class="material-symbols-outlined">logout</span>Log Out</a></aside>
     <div class="min-h-screen lg:pl-72"><header class="sticky top-0 z-30 flex h-20 items-center gap-4 border-b border-slate-200/70 bg-white/90 px-4 backdrop-blur-xl sm:px-6 lg:px-8"><div class="flex max-w-xl flex-1 items-center gap-3 rounded-xl bg-slate-50 px-4 py-2"><span class="material-symbols-outlined text-muted">search</span><input type="search" placeholder="Search suppliers, invoices..." class="w-full bg-transparent text-sm outline-none"></div><div class="hidden rounded-xl bg-slate-100 px-3 py-2 text-sm font-semibold sm:block">Store workspace · Davao City</div></header>
