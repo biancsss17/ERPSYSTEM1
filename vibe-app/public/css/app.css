@@ -1,0 +1,9 @@
+/* Small site-level overrides. Tailwind is loaded from its CDN in the Blade view. */
+body {
+    font-family: ui-sans-serif, system-ui, sans-serif;
+}
+
+/* Notifications are intentionally disabled until a real notification feed is connected. */
+header button.relative.flex.h-10.w-10 {
+    display: none !important;
+}
